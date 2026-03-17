@@ -1,247 +1,447 @@
+"use client";
+
 import React from "react";
+import Image from "next/image";
 import WaitingListForm from "@/components/WaitingListForm";
 import Card from "@/components/Card";
+import { useTheme } from "@/components/ThemeProvider";
 
 export default function Home() {
+  const { theme, toggleTheme } = useTheme();
+  const isDark = theme === "dark";
+
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-b from-sand to-white py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <div className="inline-block mb-6">
-            <span className="text-6xl">🚀</span>
+    <div
+      className={
+        isDark
+          ? "min-h-screen bg-[#020617] text-white"
+          : "min-h-screen bg-sand text-night"
+      }
+    >
+      {/* Top Navigation */}
+      <header
+        className={
+          isDark
+            ? "border-b border-white/5 bg-[#020617]/80 backdrop-blur"
+            : "border-b border-black/5 bg-white/80 backdrop-blur"
+        }
+      >
+        <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 text-sm md:py-4">
+          <div className="flex items-center gap-2 font-display text-base font-semibold md:text-lg">
+            <Image
+              src="/logo.png"
+              alt="SOTR-APP logo"
+              width={28}
+              height={28}
+              className="h-7 w-7"
+              priority
+            />
+            <span className="hidden sm:inline">SOTR-APP</span>
           </div>
-          <h1 className="font-display text-4xl md:text-6xl font-bold text-ubuntu mb-6">
-            Join the SOTR-APP Waiting List
-          </h1>
-          <p className="text-xl text-warmgray mb-4">
-            Be among the first to experience the future of Bitcoin payments in Africa
-          </p>
-          <p className="text-lg text-warmgray">
-            Get early access to our revolutionary payment routing platform
-          </p>
-        </div>
-
-        {/* Form Section */}
-        <div className="max-w-2xl mx-auto">
-          <Card className="bg-white">
-            <div className="mb-6">
-              <h2 className="font-display text-2xl font-bold text-ubuntu mb-2">
-                Reserve Your Spot
-              </h2>
-              <p className="text-warmgray">
-                Fill out the form below and we'll notify you as soon as SOTR-APP is ready.
-              </p>
-            </div>
-            <WaitingListForm />
-          </Card>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-ubuntu text-center mb-12">
-            Why Join SOTR-APP?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-5xl mb-4">⚡</div>
-              <h3 className="font-display text-xl font-bold text-ubuntu mb-3">
-                Instant Payments
-              </h3>
-              <p className="text-warmgray">
-                Send and receive Bitcoin payments instantly with real-time settlement
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="text-5xl mb-4">🔒</div>
-              <h3 className="font-display text-xl font-bold text-ubuntu mb-3">
-                Secure & Non-Custodial
-              </h3>
-              <p className="text-warmgray">
-                Your Bitcoin stays yours. We never hold your funds - complete control in your hands
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="text-5xl mb-4">🌍</div>
-              <h3 className="font-display text-xl font-bold text-ubuntu mb-3">
-                Built for Africa
-              </h3>
-              <p className="text-warmgray">
-                Designed specifically for African merchants and Bitcoiners, supporting local currencies
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="py-16 px-4 bg-sand">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-ubuntu text-center mb-12">
-            How SOTR-APP Works
-          </h2>
-          <div className="space-y-8">
-            <div className="flex gap-6">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-sahara text-white rounded-full flex items-center justify-center font-display font-bold text-xl">
-                  1
-                </div>
-              </div>
-              <div>
-                <h3 className="font-display text-xl font-bold text-ubuntu mb-2">
-                  Users Pay with Bitcoin
-                </h3>
-                <p className="text-warmgray">
-                  Bitcoiners can pay merchants directly using Bitcoin - no conversion needed, Bitcoin stays Bitcoin.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-6">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-sahara text-white rounded-full flex items-center justify-center font-display font-bold text-xl">
-                  2
-                </div>
-              </div>
-              <div>
-                <h3 className="font-display text-xl font-bold text-ubuntu mb-2">
-                  Real-Time Routing
-                </h3>
-                <p className="text-warmgray">
-                  SOTR-APP routes the payment instantly, converting Bitcoin to local currency in real-time.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-6">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-sahara text-white rounded-full flex items-center justify-center font-display font-bold text-xl">
-                  3
-                </div>
-              </div>
-              <div>
-                <h3 className="font-display text-xl font-bold text-ubuntu mb-2">
-                  Merchants Receive Payment
-                </h3>
-                <p className="text-warmgray">
-                  Merchants receive payment in their preferred currency (Bitcoin or local currency) without any crypto complexity.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SATSONTHEROAD Goals Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-ubuntu mb-4">
-              Goals for #SATSONTHEROAD
-            </h2>
-            <p className="text-lg text-warmgray max-w-2xl mx-auto">
-              Join us in building the future of Bitcoin payments in Africa. Together, we're setting ambitious goals to transform how payments work across the continent.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Goal 1: Users */}
-            <Card className="text-center bg-gradient-to-br from-sand to-white">
-              <div className="text-5xl mb-4">👥</div>
-              <h3 className="font-display text-2xl font-bold text-ubuntu mb-2">
-                5K - 10K Users
-              </h3>
-              <p className="text-warmgray text-sm">
-                Build a strong community of Bitcoiners ready to revolutionize payments
-              </p>
-              <div className="mt-4 pt-4 border-t border-ubuntu/20">
-                <span className="text-sahara font-display font-bold text-lg">Target</span>
-              </div>
-            </Card>
-
-            {/* Goal 2: Ambassadors */}
-            <Card className="text-center bg-gradient-to-br from-sand to-white">
-              <div className="text-5xl mb-4">🌟</div>
-              <h3 className="font-display text-2xl font-bold text-ubuntu mb-2">
-                200 - 500 Ambassadors
-              </h3>
-              <p className="text-warmgray text-sm">
-                Volunteer sales representatives spreading SOTR-APP across Nigeria
-              </p>
-              <div className="mt-4 pt-4 border-t border-ubuntu/20">
-                <span className="text-sahara font-display font-bold text-lg">Target</span>
-              </div>
-            </Card>
-
-            {/* Goal 3: Merchants */}
-            <Card className="text-center bg-gradient-to-br from-sand to-white">
-              <div className="text-5xl mb-4">🏪</div>
-              <h3 className="font-display text-2xl font-bold text-ubuntu mb-2">
-                50 - 100 Merchants
-              </h3>
-              <p className="text-warmgray text-sm">
-                Onboard businesses ready to accept Bitcoin payments seamlessly
-              </p>
-              <div className="mt-4 pt-4 border-t border-ubuntu/20">
-                <span className="text-sahara font-display font-bold text-lg">Target</span>
-              </div>
-            </Card>
-
-            {/* Goal 4: Media Content */}
-            <Card className="text-center bg-gradient-to-br from-sand to-white">
-              <div className="text-5xl mb-4">🎬</div>
-              <h3 className="font-display text-2xl font-bold text-ubuntu mb-2">
-                Documentary & Media
-              </h3>
-              <p className="text-warmgray text-sm">
-                Capture compelling content to showcase the app's impact and growth
-              </p>
-              <div className="mt-4 pt-4 border-t border-ubuntu/20">
-                <span className="text-sahara font-display font-bold text-lg">Target</span>
-              </div>
-            </Card>
-          </div>
-
-          <div className="mt-12 text-center">
-            <p className="text-warmgray mb-6">
-              Be part of this journey. Join the waiting list and help us achieve these goals!
-            </p>
+          <div className="hidden items-center gap-8 text-xs text-warmgray md:flex md:text-sm">
             <a
-              href="#top"
-              className="inline-block px-8 py-3 bg-sahara text-white rounded-xl font-display font-semibold hover:bg-sunset transition-all duration-200"
+              href="#how-it-works"
+              className={isDark ? "hover:text-white" : "hover:text-night"}
             >
-              Join #SATSONTHEROAD
+              How it Works
+            </a>
+            <a
+              href="#features"
+              className={isDark ? "hover:text-white" : "hover:text-night"}
+            >
+              Features
+            </a>
+            <a
+              href="#accept-bitcoin"
+              className={isDark ? "hover:text-white" : "hover:text-night"}
+            >
+              For Merchants
             </a>
           </div>
+          <div className="flex items-center gap-2 md:gap-3">
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className={
+                isDark
+                  ? "hidden rounded-full border border-white/10 px-3 py-2 text-[11px] font-semibold text-warmgray hover:border-white/30 hover:text-white md:inline-flex"
+                  : "hidden rounded-full border border-black/10 px-3 py-2 text-[11px] font-semibold text-warmgray hover:border-black/40 hover:text-night md:inline-flex"
+              }
+            >
+              {isDark ? "Light mode" : "Dark mode"}
+            </button>
+            <button
+              className={
+                isDark
+                  ? "hidden rounded-full border border-white/10 px-4 py-2 text-xs font-semibold text-warmgray hover:border-white/30 hover:text-white md:inline-flex"
+                  : "hidden rounded-full border border-black/10 px-4 py-2 text-xs font-semibold text-warmgray hover:border-black/40 hover:text-night md:inline-flex"
+              }
+            >
+              Merchant Login
+            </button>
+            <a
+              href="#accept-bitcoin"
+              className="rounded-full bg-sahara px-4 py-2 text-xs font-semibold text-night shadow-[0_0_40px_rgba(252,211,77,0.5)] hover:bg-sunset"
+            >
+              Join Waiting List
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section
+        className={
+          isDark
+            ? "relative overflow-hidden bg-gradient-to-b from-[#020617] via-[#020617] to-black px-4 pb-16 pt-10 md:pb-24 md:pt-20"
+            : "relative overflow-hidden bg-gradient-to-b from-sand via-white to-white px-4 pb-16 pt-10 md:pb-24 md:pt-20"
+        }
+      >
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <div
+            className={
+              isDark
+                ? "h-72 w-72 rounded-full bg-sahara/10 blur-3xl"
+                : "h-72 w-72 rounded-full bg-amber-300/20 blur-3xl"
+            }
+          />
+        </div>
+        <div className="relative mx-auto max-w-3xl text-center">
+          <div className="mx-auto mb-4 inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-[11px] font-semibold text-amber-200 md:mb-6 md:px-4 md:text-xs">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            <span>Lightning-fast Bitcoin payments across Africa</span>
+          </div>
+          <h1 className="mb-3 font-display text-3xl font-bold leading-tight md:mb-4 md:text-6xl">
+            Pay with <span className="text-amber-300">Bitcoin</span>,<br />
+            Settle in <span className="text-amber-400">Anything</span>
+          </h1>
+          <p className="mx-auto mb-6 max-w-2xl text-sm text-warmgray md:mb-8 md:text-base">
+            SOTR routes your Bitcoin payments to merchants across Africa — they receive BTC,
+            mobile money, or bank transfer. No custody. No friction. Just real-time settlement.
+          </p>
+          <div className="mb-8 flex flex-wrap items-center justify-center gap-3 md:mb-10 md:gap-4">
+            <button className="w-full max-w-xs rounded-full bg-sahara px-6 py-3 text-sm font-semibold text-night shadow-[0_0_40px_rgba(252,211,77,0.6)] hover:bg-sunset md:w-auto">
+              Start Paying
+            </button>
+            <button className="w-full max-w-xs rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:border-white/40 hover:bg-white/10 md:w-auto">
+              Accept Payments
+            </button>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-warmgray md:gap-8">
+            <div className="text-center">
+              <div
+                className={
+                  isDark
+                    ? "text-lg font-semibold text-white"
+                    : "text-lg font-semibold text-night"
+                }
+              >
+                54+
+              </div>
+              <div>Countries</div>
+            </div>
+            <div className="text-center">
+              <div
+                className={
+                  isDark
+                    ? "text-lg font-semibold text-white"
+                    : "text-lg font-semibold text-night"
+                }
+              >
+                ⚡
+              </div>
+              <div>Instant</div>
+            </div>
+            <div className="text-center">
+              <div
+                className={
+                  isDark
+                    ? "text-lg font-semibold text-white"
+                    : "text-lg font-semibold text-night"
+                }
+              >
+                0%
+              </div>
+              <div>Custody</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-ubuntu text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Payments in Africa?
+      {/* Built for Africa / Feature grid */}
+      <section
+        id="features"
+        className={isDark ? "bg-[#020617] px-4 py-14" : "bg-sand px-4 py-14"}
+      >
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-10 text-center">
+            <h2 className="font-display text-3xl font-bold">
+              Built for <span className="text-amber-300">Africa</span>
+            </h2>
+            <p className="mt-3 text-sm text-warmgray md:text-base">
+              Infrastructure that respects the continent&apos;s diversity — multiple currencies,
+              providers, and settlement methods.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <Card
+              className={
+                isDark
+                  ? "bg-[#111827] text-left shadow-[0_18px_40px_rgba(0,0,0,0.5)]"
+                  : "bg-white text-left shadow-sm border border-ubuntu/10"
+              }
+            >
+              <h3
+                className={
+                  isDark
+                    ? "mb-2 font-display text-lg font-semibold text-white"
+                    : "mb-2 font-display text-lg font-semibold text-ubuntu"
+                }
+              >
+                Lightning Payments
+              </h3>
+              <p className="text-sm text-warmgray">
+                Pay via Lightning Network. No waiting, no high on-chain fees — just instant Bitcoin.
+              </p>
+            </Card>
+            <Card
+              className={
+                isDark
+                  ? "bg-[#111827] text-left shadow-[0_18px_40px_rgba(0,0,0,0.5)]"
+                  : "bg-white text-left shadow-sm border border-ubuntu/10"
+              }
+            >
+              <h3
+                className={
+                  isDark
+                    ? "mb-2 font-display text-lg font-semibold text-white"
+                    : "mb-2 font-display text-lg font-semibold text-ubuntu"
+                }
+              >
+                Smart Routing
+              </h3>
+              <p className="text-sm text-warmgray">
+                Our rails find the best provider for each country and corridor, automatically.
+              </p>
+            </Card>
+            <Card
+              className={
+                isDark
+                  ? "bg-[#111827] text-left shadow-[0_18px_40px_rgba(0,0,0,0.5)]"
+                  : "bg-white text-left shadow-sm border border-ubuntu/10"
+              }
+            >
+              <h3
+                className={
+                  isDark
+                    ? "mb-2 font-display text-lg font-semibold text-white"
+                    : "mb-2 font-display text-lg font-semibold text-ubuntu"
+                }
+              >
+                Flexible Settlement
+              </h3>
+              <p className="text-sm text-warmgray">
+                Merchants choose between BTC, mobile money, or bank transfer — per payment.
+              </p>
+            </Card>
+            <Card
+              className={
+                isDark
+                  ? "bg-[#111827] text-left shadow-[0_18px_40px_rgba(0,0,0,0.5)]"
+                  : "bg-white text-left shadow-sm border border-ubuntu/10"
+              }
+            >
+              <h3
+                className={
+                  isDark
+                    ? "mb-2 font-display text-lg font-semibold text-white"
+                    : "mb-2 font-display text-lg font-semibold text-ubuntu"
+                }
+              >
+                Merchant Discovery
+              </h3>
+              <p className="text-sm text-warmgray">
+                Find Bitcoin-accepting merchants near you via our interactive map.
+              </p>
+            </Card>
+            <Card
+              className={
+                isDark
+                  ? "bg-[#111827] text-left shadow-[0_18px_40px_rgba(0,0,0,0.5)]"
+                  : "bg-white text-left shadow-sm border border-ubuntu/10"
+              }
+            >
+              <h3
+                className={
+                  isDark
+                    ? "mb-2 font-display text-lg font-semibold text-white"
+                    : "mb-2 font-display text-lg font-semibold text-ubuntu"
+                }
+              >
+                Non-Custodial
+              </h3>
+              <p className="text-sm text-warmgray">
+                Bitcoin never leaves your wallet. Funds route directly to the receiving party.
+              </p>
+            </Card>
+            <Card
+              className={
+                isDark
+                  ? "bg-[#111827] text-left shadow-[0_18px_40px_rgba(0,0,0,0.5)]"
+                  : "bg-white text-left shadow-sm border border-ubuntu/10"
+              }
+            >
+              <h3
+                className={
+                  isDark
+                    ? "mb-2 font-display text-lg font-semibold text-white"
+                    : "mb-2 font-display text-lg font-semibold text-ubuntu"
+                }
+              >
+                Mobile-First
+              </h3>
+              <p className="text-sm text-warmgray">
+                Designed for low-bandwidth, mobile devices across African networks.
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section
+        id="how-it-works"
+        className={isDark ? "bg-[#020617] px-4 py-16" : "bg-sand px-4 py-16"}
+      >
+        <div className="mx-auto max-w-3xl">
+          <h2 className="mb-10 text-center font-display text-3xl font-bold">
+            How SOTR Works
           </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Join thousands of early adopters and be part of the Bitcoin revolution
-          </p>
-          <a
-            href="#top"
-            className="inline-block px-8 py-4 bg-sahara text-white rounded-xl font-display font-semibold hover:bg-sunset transition-all duration-200"
+          <div className="space-y-8">
+            <div className="flex gap-4">
+              <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-sahara text-night">
+                1
+              </div>
+              <div>
+                <h3 className="mb-1 font-display text-lg font-semibold">
+                  Connect Wallet
+                </h3>
+                <p className="text-sm text-warmgray">
+                  Link your Lightning or Bitcoin wallet. SOTR never takes custody of your keys.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-sahara text-night">
+                2
+              </div>
+              <div>
+                <h3 className="mb-1 font-display text-lg font-semibold">
+                  Scan &amp; Pay
+                </h3>
+                <p className="text-sm text-warmgray">
+                  Scan the merchant&apos;s QR code or select them from the in-app map.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-sahara text-night">
+                3
+              </div>
+              <div>
+                <h3 className="mb-1 font-display text-lg font-semibold">
+                  Smart Route
+                </h3>
+                <p className="text-sm text-warmgray">
+                  SOTR finds the best provider to route the payment instantly across rails.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-sahara text-night">
+                4
+              </div>
+              <div>
+                <h3 className="mb-1 font-display text-lg font-semibold">
+                  Confirmed
+                </h3>
+                <p className="text-sm text-warmgray">
+                  Merchant receives in their preferred currency. Both parties see final status.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Accept Bitcoin / CTA band */}
+      <section
+        id="accept-bitcoin"
+        className={isDark ? "bg-[#020617] px-4 pb-16 pt-10" : "bg-white px-4 pb-16 pt-10"}
+      >
+        <div className="mx-auto max-w-6xl">
+          <div
+            className={
+              isDark
+                ? "overflow-hidden rounded-2xl bg-gradient-to-r from-[#111827] to-[#020617] p-8 shadow-[0_24px_60px_rgba(0,0,0,0.7)] md:p-10"
+                : "overflow-hidden rounded-2xl bg-gradient-to-r from-sand to-white p-8 shadow-md md:p-10"
+            }
           >
-            Join Waiting List
-          </a>
+            <div className="grid gap-8 md:grid-cols-[2fr,1fr] md:items-center">
+              <div>
+                <h2 className="font-display text-2xl font-bold md:text-3xl">
+                  Accept <span className="text-amber-300">Bitcoin</span> at your business
+                </h2>
+                <p className="mt-3 text-sm text-warmgray md:text-base">
+                  Join hundreds of merchants across Africa. Get paid in Bitcoin, mobile money, or
+                  bank transfer — your choice. Setup takes less than 2 minutes.
+                </p>
+                <div className="mt-6">
+                  <button className="rounded-xl bg-sahara px-6 py-3 text-sm font-semibold text-night shadow-[0_0_40px_rgba(252,211,77,0.6)] hover:bg-sunset">
+                    Merchant Dashboard (Coming Soon)
+                  </button>
+                </div>
+              </div>
+              <div className="grid gap-4 text-sm text-warmgray">
+                <div
+                  className={
+                    isDark
+                      ? "rounded-xl border border-white/5 bg-black/20 px-4 py-3"
+                      : "rounded-xl border border-ubuntu/10 bg-sand px-4 py-3"
+                  }
+                >
+                  <div
+                    className={
+                      isDark
+                        ? "text-xs uppercase tracking-wide text-white/60"
+                        : "text-xs uppercase tracking-wide text-ubuntu"
+                    }
+                  >
+                    Join the waiting list
+                  </div>
+                  <p className="mt-2 text-xs">
+                    Share your details and we&apos;ll notify you as soon as merchant tools go live.
+                  </p>
+                  <div className="mt-4">
+                    <WaitingListForm />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 bg-night text-white text-center">
-        <p className="text-warmgray">
-          © {new Date().getFullYear()} SOTR-APP. All rights reserved. | Powered by BitKwa
+      <footer
+        className={
+          isDark
+            ? "border-t border-white/10 bg-[#020617] px-4 py-6 text-center text-xs text-warmgray"
+            : "border-t border-black/10 bg-white px-4 py-6 text-center text-xs text-warmgray"
+        }
+      >
+        <p>
+          © {new Date().getFullYear()} SOTR-APP — Sats On The Road. All rights reserved.
         </p>
       </footer>
     </div>

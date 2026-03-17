@@ -55,7 +55,7 @@ export default function WaitingListForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6 p-3 md:p-4">
       <div>
         <label
           htmlFor="name"

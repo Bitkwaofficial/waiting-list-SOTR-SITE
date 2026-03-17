@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito, Poppins } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -28,8 +29,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${nunito.variable} ${poppins.variable}`}>
-      <body className="font-sans bg-sand text-night antialiased">
-        {children}
+      <body className="font-sans antialiased">
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

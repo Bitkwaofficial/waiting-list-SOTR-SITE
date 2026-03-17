@@ -1,0 +1,244 @@
+[00:00:00.787] Server  LOG     ✓ Ready in 563ms
+[00:00:01.124] Server  ERROR   ⨯ ./components/ThemeProvider.tsx:1:2
+Parsing ecmascript source code failed
+> 1 | \"use client\";
+    |  ^^^^^^^^^^^^^^
+  2 |
+  3 | import React, { createContext, useContext, useEffect, useState } from \"react\";
+  4 |
+
+Unterminated string constant
+
+Import traces:
+  Server Component:
+    ./components/ThemeProvider.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./components/ThemeProvider.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ThemeProvider.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:00:01.788] Browser ERROR   uncaughtError: Error: ./components/ThemeProvider.tsx:1:2
+Parsing ecmascript source code failed
+> 1 | \"use client\";
+    |  ^^^^^^^^^^^^^^
+  2 |
+  3 | import React, { createContext, useContext, useEffect, useState } from \"react\";
+  4 |
+
+Unterminated string constant
+
+Import traces:
+  Server Component:
+    ./components/ThemeProvider.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./components/ThemeProvider.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ThemeProvider.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:00:01.788] Browser ERROR   ./components/ThemeProvider.tsx:1:2
+Parsing ecmascript source code failed
+> 1 | \"use client\";
+    |  ^^^^^^^^^^^^^^
+  2 |
+  3 | import React, { createContext, useContext, useEffect, useState } from \"react\";
+  4 |
+
+Unterminated string constant
+
+Import traces:
+  Server Component:
+    ./components/ThemeProvider.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./components/ThemeProvider.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ThemeProvider.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:00:01.788] Browser ERROR   ./components/ThemeProvider.tsx:1:2
+Parsing ecmascript source code failed
+> 1 | \"use client\";
+    |  ^^^^^^^^^^^^^^
+  2 |
+  3 | import React, { createContext, useContext, useEffect, useState } from \"react\";
+  4 |
+
+Unterminated string constant
+
+Import traces:
+  Server Component:
+    ./components/ThemeProvider.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./components/ThemeProvider.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ThemeProvider.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:00:02.391] Browser ERROR   ./components/ThemeProvider.tsx:1:2
+Parsing ecmascript source code failed
+> 1 | \"use client\";
+    |  ^^^^^^^^^^^^^^
+  2 |
+  3 | import React, { createContext, useContext, useEffect, useState } from \"react\";
+  4 |
+
+Unterminated string constant
+
+Import traces:
+  Server Component:
+    ./components/ThemeProvider.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./components/ThemeProvider.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ThemeProvider.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:00:03.494] Server  ERROR   ⨯ ./components/ThemeProvider.tsx:1:2
+Parsing ecmascript source code failed
+> 1 | \"use client\";
+    |  ^^^^^^^^^^^^^^
+  2 |
+  3 | import React, { createContext, useContext, useEffect, useState } from \"react\";
+  4 |
+
+Unterminated string constant
+
+Import traces:
+  Server Component:
+    ./components/ThemeProvider.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./components/ThemeProvider.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ThemeProvider.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:00:04.133] Browser ERROR   ./components/ThemeProvider.tsx:1:2
+Parsing ecmascript source code failed
+> 1 | \"use client\";
+    |  ^^^^^^^^^^^^^^
+  2 |
+  3 | import React, { createContext, useContext, useEffect, useState } from \"react\";
+  4 |
+
+Unterminated string constant
+
+Import traces:
+  Server Component:
+    ./components/ThemeProvider.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./components/ThemeProvider.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ThemeProvider.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:00:04.133] Browser ERROR   uncaughtError: Error: ./components/ThemeProvider.tsx:1:2
+Parsing ecmascript source code failed
+> 1 | \"use client\";
+    |  ^^^^^^^^^^^^^^
+  2 |
+  3 | import React, { createContext, useContext, useEffect, useState } from \"react\";
+  4 |
+
+Unterminated string constant
+
+Import traces:
+  Server Component:
+    ./components/ThemeProvider.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./components/ThemeProvider.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ThemeProvider.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:00:04.133] Browser ERROR   ./components/ThemeProvider.tsx:1:2
+Parsing ecmascript source code failed
+> 1 | \"use client\";
+    |  ^^^^^^^^^^^^^^
+  2 |
+  3 | import React, { createContext, useContext, useEffect, useState } from \"react\";
+  4 |
+
+Unterminated string constant
+
+Import traces:
+  Server Component:
+    ./components/ThemeProvider.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./components/ThemeProvider.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ThemeProvider.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:00:30.470] Server  LOG     ✓ Compiled in 636ms
+[00:00:30.980] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:57.141] Server  LOG     ✓ Compiled in 79ms
+[00:11:02.801] Server  LOG     ✓ Compiled in 35ms
+[00:11:08.435] Server  LOG     ✓ Compiled in 39ms
+[00:11:21.946] Server  LOG     ✓ Compiled in 93ms
+[00:12:37.997] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:53.092] Server  LOG     ✓ Compiled in 85ms
+[00:14:30.070] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:48.232] Server  LOG     ✓ Compiled in 81ms
+[00:16:54.266] Server  LOG     ✓ Compiled in 55ms
+[00:17:16.712] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:18.253] Server  LOG     ✓ Compiled in 78ms
+[00:18:22.833] Server  LOG     ✓ Compiled in 33ms
+[00:20:21.686] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:06.740] Server  LOG     ✓ Compiled in 283ms
+[00:23:07.393] Server  ERROR   ⨯ Error: supabaseUrl is required.
+[00:23:07.792] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:07.947] Browser ERROR   uncaughtError: Error: supabaseUrl is required.
