@@ -242,3 +242,8 @@ Import traces:
 [00:23:07.393] Server  ERROR   ⨯ Error: supabaseUrl is required.
 [00:23:07.792] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [00:23:07.947] Browser ERROR   uncaughtError: Error: supabaseUrl is required.
+[01:29:01.585] Server  ERROR   ⨯ Error: supabaseUrl is required.
+[01:29:01.828] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:29:01.986] Browser ERROR   uncaughtError: Error: supabaseUrl is required.
+[01:55:43.867] Server  LOG       Reload env: .env.local
+[01:55:46.820] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
