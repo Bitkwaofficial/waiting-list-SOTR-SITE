@@ -107,7 +107,13 @@ export default function Home() {
           />
         </div>
         <div className="relative mx-auto max-w-3xl text-center">
-          <div className="mx-auto mb-4 inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-[11px] font-semibold text-amber-200 md:mb-6 md:px-4 md:text-xs">
+          <div
+            className={
+              isDark
+                ? "mx-auto mb-4 inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-[11px] font-semibold text-amber-200 md:mb-6 md:px-4 md:text-xs"
+                : "mx-auto mb-4 inline-flex items-center gap-2 rounded-full border border-amber-400/80 bg-amber-400/10 px-3 py-1 text-[11px] font-semibold text-amber-700 md:mb-6 md:px-4 md:text-xs"
+            }
+          >
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
             <span>Lightning-fast Bitcoin payments across Africa</span>
           </div>
@@ -123,7 +129,13 @@ export default function Home() {
             <button className="w-full max-w-xs rounded-full bg-sahara px-6 py-3 text-sm font-semibold text-night shadow-[0_0_40px_rgba(252,211,77,0.6)] hover:bg-sunset md:w-auto">
               Start Paying
             </button>
-            <button className="w-full max-w-xs rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:border-white/40 hover:bg-white/10 md:w-auto">
+            <button
+              className={
+                isDark
+                  ? "w-full max-w-xs rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:border-white/40 hover:bg-white/10 md:w-auto"
+                  : "w-full max-w-xs rounded-full border border-amber-400/80 bg-white px-6 py-3 text-sm font-semibold text-amber-700 hover:bg-amber-50 md:w-auto"
+              }
+            >
               Accept Payments
             </button>
           </div>

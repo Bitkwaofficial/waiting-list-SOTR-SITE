@@ -568,6 +568,10 @@ img, video {
   border-color: #5c3b1e1a;
 }
 
+.border-amber-400\/80 {
+  border-color: #fbbf24cc;
+}
+
 .bg-\[\#111827\] {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
@@ -936,6 +940,11 @@ img, video {
   color: #fff9;
 }
 
+.text-amber-700 {
+  --tw-text-opacity: 1;
+  color: rgb(180 83 9 / var(--tw-text-opacity, 1));
+}
+
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1049,6 +1058,11 @@ body {
 
 .hover\:bg-white\/10:hover {
   background-color: #ffffff1a;
+}
+
+.hover\:bg-amber-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 251 235 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-night:hover {
