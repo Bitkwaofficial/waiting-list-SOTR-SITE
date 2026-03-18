@@ -1,4 +1,4 @@
-# SOTR-APP Waiting List Site 
+# SOTR-APP Waiting List Site.  
 
 A beautiful waiting list registration site for the SOTR-APP mobile app - a revolutionary Bitcoin payment routing platform for Africa.
 
